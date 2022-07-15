@@ -1,10 +1,3 @@
-from ast import Call
-from asyncio import events
-from email.mime import audio
-from gc import callbacks
-import re
-from subprocess import call
-from tkinter import Button
 from config import bot
 from pyrogram import Client, filters
 from pyrogram.types import Message, InlineKeyboardButton, InlineKeyboardMarkup, CallbackQuery

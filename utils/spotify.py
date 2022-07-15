@@ -1,6 +1,3 @@
-from ast import pattern
-from email.mime import audio
-from subprocess import call
 from config import bot
 from pyrogram import Client, filters
 from pyrogram.types import Message, CallbackQuery
