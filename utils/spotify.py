@@ -1,3 +1,6 @@
+from email import message
+
+from numpy import character
 from config import bot
 from pyrogram import Client, filters
 from pyrogram.types import Message, CallbackQuery
@@ -310,7 +313,13 @@ class spotify:
     @bot.on_callback_query(filters=filters.regex(r"next_"))
     async def callback_for_next(client: Client, callback: CallbackQuery):
 
-        button = pagi_obj.next_button()
+        try:
+            button = pagi_obj.next_button()
+        except:
+            await bot.send_message(
+            chat_id=callback.from_user.id,
+            text="No more pages available."
+        )
 
         await callback.message.edit(
             text=f'**Select the track(s) you want to download**\n__Arrow Buttons will not function while the tracks are downloading.__\n\n**Total Track Found: __{pagi_obj.total_tracks}__**',
@@ -324,7 +333,13 @@ class spotify:
     @bot.on_callback_query(filters=filters.regex(r"prev_"))
     async def callback_for_prev(client: Client, callback: CallbackQuery):
 
-        button = pagi_obj.prev_button()
+        try:
+            button = pagi_obj.prev_button()
+        except:
+            await bot.send_message(
+            chat_id=callback.from_user.id,
+            text="No more pages available."
+        )
 
         await callback.message.edit(
             text=f'**Select the track(s) you want to download**\n__Arrow Buttons will not function while the tracks are downloading.__\n\n**Total Track Found: __{pagi_obj.total_tracks}__**',
@@ -337,7 +352,13 @@ class spotify:
     @bot.on_callback_query(filters=filters.regex(r"first_"))
     async def callback_for_first(client: Client, callback: CallbackQuery):
 
-        button = pagi_obj.first_button()
+        try:
+            button = pagi_obj.first_button()
+        except:
+            await bot.send_message(
+            chat_id=callback.from_user.id,
+            text="No more pages available."
+        )
 
         await callback.message.edit(
             text=f'**Select the track(s) you want to download**\n__Arrow Buttons will not function while the tracks are downloading.__\n\n**Total Track Found: __{pagi_obj.total_tracks}__**',
@@ -350,7 +371,13 @@ class spotify:
     @bot.on_callback_query(filters=filters.regex(r"last_"))
     async def callback_for_last(client: Client, callback: CallbackQuery):
 
-        button = pagi_obj.last_button()
+        try:
+            button = pagi_obj.last_button()
+        except:
+            await bot.send_message(
+            chat_id=callback.from_user.id,
+            text="No more pages available."
+        )
 
         await callback.message.edit(
             text=f'**Select the track(s) you want to download**\n__Arrow Buttons will not function while the tracks are downloading.__\n\n**Total Track Found: __{pagi_obj.total_tracks}__**',
