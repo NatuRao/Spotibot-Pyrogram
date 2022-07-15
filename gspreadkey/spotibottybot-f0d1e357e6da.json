@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "spotibottybot",
+  "private_key_id": "f0d1e357e6dabffaa57fc73570f05f77c882e56d",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCeKwmeFV94d6MT\nkzmmAqMFAQe/UDt8D31mpfYiTJQjutBtrJQgsb2uktNwNVjNQId6Jh4IjjwKCaL1\nmQD48/2FdXvYWdENYr2KABAp3okxpbfT838nDs14EUVRTY+zYsswJpGS6/VbzQku\nSQDkFnI5VOb2y7bQLXNrUbN4XZZQdVt8AD1ghksENPVGq1iI8HDvf65mh1cB5zAY\n8UzeM9ZBA10bo5VMwd4YkQ1XruKpwSN72DuBabZTXicjqHlHUN+VQGlg/D11TWHd\n1kzl0bJTqbDtTHdOD9oTenXkb+5aSELtAYIsIGCeYBKkeTu65AMCKvvrwjIhfsEE\nzXm9ZS+fAgMBAAECggEAA4BK++hXzvgnyhDWur5RMuGodPHHBBwcEWmE25KCLvfj\nxQghouDV8Y2hFFlIW3BdVcHCC9XWLcsaNw4jFhLhXqxqLuPu4dLfN86zjOTqElX4\nQT7t5oS7dwTVQEaTjHJLf1SpoUZyDabdJQ/YCLR+F8qYCDuCX8GGmtTZ2hHveCo8\nw0sA9/Fp1HaFclI2ky5Bc8O1vV+uT4F6P50a5OQRlg0f95vSsRe8zU50tElTw+CD\ncA3hjDxGIc10paW0cWkSra5c3aOT4khtCrIXdmUnJyzaJpwrvwkYzAMtMaua1ExQ\nC1OlrEGD9kDZa6BTJJipfgCuYGKZ6A8M0H0AP9ggMQKBgQDPSHPSGpSvCFTNQgGn\nMH3n8pDDNPUNzUJJFPjvTCbxvXVb3KUTEz01MaiarLJi1sjmgghbXAQZ6DswNdat\nkMFKY2fSfPSGX07qLVpDo2rsRTx2m7y8qqBYMhVh1u1ayBb19lhVF8k+R70AGJ5p\nYTH6+dgGyYGe3lfHGt0lXlU5TwKBgQDDV4ApUcUuCCGJFcB+MF3P6AdXSELqARmy\nLteTn3fn7w5hibY6WNp+eL9UTuaJq5GINY9t/Kojgf29MEkJMP2Ti0WjMK3106QP\nMyJqjDb12y4MVo02muMRzg8MvSE4TVPzgXQKxhjfo7u2OSwXBwUdJOYQUMpYGaMp\nE5mN6LpwsQKBgQCAaHrPgoXvNHMMQMKzZtfok5zYQPs6FJjmmyZnX76UbPDB+psM\niROW229+elN75WDJY2534jXsMrBP+lpGZXFIevI7NAtrHqnNalELq7W2LmH5fBrc\nqbrxR/11AedCIMgQkQ5BkJ2rhldwMtAXqg2DU7le4v/4gfbQsjSjTJ/xAwKBgQCQ\nly4YZ5xqbD5WeDFZtndaM0drxeMxzsq0Z5POg5V/qiWc8RBfs/FW+A23XAetE7/P\ncMXQBdvyGIA3D4ygLxEjq01Kc/fwJE4lqhXphAwSg8BcBZzVNGSrgzkEluIGCMcB\nUWsRpnw23b1OLpeCHAIfBnb80LBV8fQhrY5VylRmoQKBgASSLQ1Iz/gca98e/UAY\nkEKYKmsTlJ/IEf6T2PPH8H0SBUhbueren7gxJ5HdTf8JmtRhD1vAGWZYLkKyHvys\nXiNkTIm211p4uvKdKCVGGW10UvT9lRl9bsiiZJk867NPD3GGQHRpc3ZDTmq2NUiu\nINXPUmFoZBQmfFK9t5pnSCfp\n-----END PRIVATE KEY-----\n",
+  "client_email": "spotibottybot@spotibottybot.iam.gserviceaccount.com",
+  "client_id": "117216651829040845320",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/spotibottybot%40spotibottybot.iam.gserviceaccount.com"
+}
