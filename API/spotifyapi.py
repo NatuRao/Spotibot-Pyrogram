@@ -35,10 +35,6 @@ class spotifyapi:
                 tracks_name.append(f'{track_name} - {artist_name}')
                 tracks_id.append(track_id)
 
-                del track
-                del artist_name
-                gc.collect()
-
             off_set += 100
 
         del off_set
