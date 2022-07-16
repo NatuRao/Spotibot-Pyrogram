@@ -182,6 +182,7 @@ class spotify:
 
         elif video_id != "No Download":
             file_path = spytapi.download_audio(video_id, pagi_obj.tracks_name_id[pagi_obj.current_page - 1][track_id])
+            print(f"File Path: {file_path}")
             spytapi.setting_metadata(file_path, pagi_obj.tracks_name_id[pagi_obj.current_page - 1][track_id])
 
             if file_path == "Error":
@@ -303,12 +304,14 @@ class spotify:
                         except:
                             pass
 
-                    del video_id
-                    del file_path
-                    gc.collect()
+                del file_path
+                del video_id
+                gc.collect()
+            
             del id
             del name
             gc.collect()
+
         del dic
         gc.collect()
 

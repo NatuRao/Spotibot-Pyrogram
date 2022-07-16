@@ -208,7 +208,6 @@ class spotiYT:
 
             del track_name
             del des
-            del source
             del url
             del yt
             del stream
