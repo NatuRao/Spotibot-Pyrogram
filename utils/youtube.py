@@ -7,6 +7,7 @@ from Pagination.pagination import pagination as pagi
 from API.youtubeapi import youtubeapi as ytapi
 
 import os
+import gc
 
 pagi_obj = pagi()
 ytapi_obj = ytapi()
@@ -51,6 +52,11 @@ class youtube:
                 reply_markup=button
             )
 
+            del first_name
+            del link
+            del button
+            gc.collect()
+
     @bot.on_callback_query(filters=filters.regex(r"^video:"))
     async def callback_handler_video(client: Client, callback: CallbackQuery):
         
@@ -77,6 +83,12 @@ class youtube:
             reply_markup=resolution_button
         )
 
+        del resolution_button
+        del resolution_list
+        del stream_list
+        del count
+        gc.collect()
+
     @bot.on_callback_query(filters=filters.regex(r"^audio:"))
     async def callback_handler_audio(client: Client, callback: CallbackQuery):
         audio_quality, stream_list = ytapi_obj.get_audio_streams(pagi_obj.link)
@@ -101,6 +113,12 @@ class youtube:
             "Select Audio Quality",
             reply_markup=audio_quality_button
         )
+
+        del audio_quality_button
+        del audio_quality
+        del stream_list
+        del count
+        gc.collect()
 
     @bot.on_callback_query(filters=filters.regex(r"^dlvid:"))
     async def callback_download_video(client: Client, callback: CallbackQuery):
@@ -138,11 +156,18 @@ class youtube:
                 text="Something went wrong, the video can't download..."
             )
 
+
         # else:
         #     await bot.send_message(
         #         chat_id=callback.from_user.id,
         #         text=
         #     )
+
+        del index
+        del file_size
+        del file_path
+        del file_name
+        gc.collect()
 
     @bot.on_callback_query(filters=filters.regex(r"^dlaudio:"))
     async def callback_handler_download(client: Client, callback: CallbackQuery):
@@ -175,6 +200,11 @@ class youtube:
                 text="Something went wrong, the video can't download..."
             )
 
+        del index
+        del file_path
+        del file_name
+        gc.collect()
+
     @bot.on_callback_query(filters=filters.regex(r"^back:"))
     async def callback_for_back(client: Client, callback: CallbackQuery):
         button = []
@@ -187,3 +217,6 @@ class youtube:
             text="Select Streams:",
             reply_markup=button
         )
+        
+        del button
+        gc.collect()

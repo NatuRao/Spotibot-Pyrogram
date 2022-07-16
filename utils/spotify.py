@@ -1,6 +1,3 @@
-from email import message
-
-from numpy import character
 from config import bot
 from pyrogram import Client, filters
 from pyrogram.types import Message, CallbackQuery
@@ -130,10 +127,12 @@ class spotify:
 
                     del button
                     del link
+                    del first_name
                     del tracks_name
                     del tracks_id
                     del tracks_name_id
                     del total_tracks
+                    del ch_perrow
                     gc.collect()
             
             elif choice == "T":
@@ -251,6 +250,7 @@ class spotify:
 
                 del video_id
                 del file_path
+                gc.collect()
 
         del id
         del name
@@ -305,8 +305,10 @@ class spotify:
 
                     del video_id
                     del file_path
+                    gc.collect()
             del id
             del name
+            gc.collect()
         del dic
         gc.collect()
 

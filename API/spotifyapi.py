@@ -12,6 +12,7 @@ from moviepy.editor import *
 import os
 import re
 import re
+import gc
 import eyed3
 
 class spotifyapi:
@@ -33,7 +34,17 @@ class spotifyapi:
 
                 tracks_name.append(f'{track_name} - {artist_name}')
                 tracks_id.append(track_id)
+
+                del track
+                del artist_name
+                gc.collect()
+
             off_set += 100
+
+        del off_set
+        del playlist_URI
+        del playlist_link
+        gc.collect()
         
         return tracks_name, tracks_id, total_tracks
 
@@ -54,6 +65,13 @@ class spotifyapi:
             tracks_name.append(f'{track_name} - {artist_name}')
             tracks_id.append(track_id)
 
+            del track
+            gc.collect()
+
+        del album_link
+        del album_URI
+        gc.collect()
+
         return tracks_name, tracks_id, total_tracks
 
 
@@ -68,8 +86,15 @@ class spotifyapi:
 
         for i in track_info['album']['artists']:
             track_artist = track_artist + i['name'] + ', '
+
+            del i
+            gc.collect()
         
         track_artist = track_artist[:-2]
+
+        del track_URI
+        del track_info
+        gc.collect()
 
         return track_name, track_artist, track_date, track_image, album_name
 
@@ -128,6 +153,10 @@ class spotiYT:
             results = s.results
             video_id = results[0].video_id
 
+            del s
+            del results
+            gc.collect()
+
             return video_id
         except:
             return "No Download"
@@ -166,6 +195,7 @@ class spotiYT:
                 os.remove(mp4_file)
             except Exception as e:
                 print(e)
+
             # try:
                 
             # except Exception as e:
@@ -179,6 +209,18 @@ class spotiYT:
 
             # # result of success
             # print(track_name + " has been successfully downloaded.")
+
+            del track_name
+            del des
+            del source
+            del url
+            del yt
+            del stream
+            del mp4_file
+            del yt_file_name
+            del video
+            gc.collect()
+
             return source
         
         except:
@@ -189,3 +231,8 @@ class spotiYT:
         audiofile.tag.title = track_name.split("-")[0]
         audiofile.tag.artist = track_name.split("-")[-1]
         audiofile.tag.save()
+
+        del audiofile
+        del file_path
+        del track_name
+        gc.collect()

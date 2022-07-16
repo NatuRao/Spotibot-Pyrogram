@@ -1,5 +1,6 @@
+import enum
 from config import bot
-from pyrogram import Client, filters
+from pyrogram import Client, filters, enums
 from pyrogram.types import Message
 from Helper.helper import start_text, help_text
 
@@ -12,6 +13,7 @@ class starter:
         await bot.send_photo(
             chat_id=message.chat.id,
             caption=f"Hi **__{first_name}__**, {start_text}",
+            parse_mode=enums.ParseMode.MARKDOWN,
             photo="https://telegra.ph/file/618567217c6733a205f95.jpg"
         )
 
@@ -19,5 +21,6 @@ class starter:
     async def help_command(client: Client, message: Message):
         await bot.send_message(
             chat_id=message.chat.id,
+            parse_mode=enums.ParseMode.MARKDOWN,
             text=help_text
         )

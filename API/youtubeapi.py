@@ -1,6 +1,7 @@
 from pytube import YouTube
 
 import os
+import gc
 
 class youtubeapi:
 
@@ -21,6 +22,14 @@ class youtubeapi:
             resolution_list.append(temp)
             stream_list.append(stream)
 
+            del stream
+            del temp
+            gc.collect()
+        
+        del yt
+        del link
+        gc.collect()
+
         return resolution_list, stream_list
 
     def get_audio_streams(self, link):
@@ -36,6 +45,13 @@ class youtubeapi:
         for stream in yt.streams.filter(type='audio', file_extension='mp4'):
             audio_quality.append(stream.abr)
             stream_list.append(stream)
+
+            del stream
+            gc.collect()
+
+        del yt
+        del link
+        gc.collect()
         
         return audio_quality, stream_list
 
@@ -57,6 +73,14 @@ class youtubeapi:
         #     print("Can't rename")
 
         print(file_name + " has been successfully downloaded.")
+
+        del index
+        del des
+        del file_name
+        del out_file
+        del stream_list
+        del index
+        gc.collect()
 
         return new_file
 
@@ -84,10 +108,22 @@ class youtubeapi:
         except:
             pass
 
-        return f'{des}{file_name}.mp3'
+        del index
+        del stream_list
+        del des
+        del out_file
+        del file_name
+        gc.collect()
+
+        return new_file
 
     def get_video_size(self, stream_list, index):
         file_size = stream_list[int(index)].filesize
+
+        del stream_list
+        del index
+        gc.collect()
+
         return file_size
 
 
@@ -98,8 +134,14 @@ class youtubeapi:
         double_bytes = bytes_number
     
         while (i < len(tags) and  bytes_number >= 1024):
-                double_bytes = bytes_number / 1024.0
-                i = i + 1
-                bytes_number = bytes_number / 1024
+            double_bytes = bytes_number / 1024.0
+            i = i + 1
+            bytes_number = bytes_number / 1024
+
+        del i
+        del double_bytes
+        del bytes_number
+        del tags
+        gc.collect()
     
         return str(round(double_bytes, 2)) + " " + tags[i]
