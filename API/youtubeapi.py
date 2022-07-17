@@ -138,9 +138,7 @@ class youtubeapi:
             i = i + 1
             bytes_number = bytes_number / 1024
 
-        del i
         del bytes_number
-        del tags
         gc.collect()
     
         return str(round(double_bytes, 2)) + " " + tags[i]
