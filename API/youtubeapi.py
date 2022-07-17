@@ -79,7 +79,6 @@ class youtubeapi:
         del file_name
         del out_file
         del stream_list
-        del index
         gc.collect()
 
         return new_file
