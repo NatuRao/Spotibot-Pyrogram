@@ -140,7 +140,6 @@ class youtubeapi:
 
         del i
         del double_bytes
-        del bytes_number
         del tags
         gc.collect()
     
