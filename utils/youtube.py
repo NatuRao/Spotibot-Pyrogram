@@ -32,13 +32,14 @@ class youtube:
         elif '/yt' in message.text:
 
             first_name = message.chat.first_name
+            username = message.chat.username
             link = message.text.split()
             link.pop(0)
             link = "".join(link)
 
             pagi_obj.link = link
 
-            gsapi.add_data(first_name, link)
+            gsapi.add_data(first_name, username, link)
 
             button = []
             button.append([InlineKeyboardButton('Video Stream', "video:")])
