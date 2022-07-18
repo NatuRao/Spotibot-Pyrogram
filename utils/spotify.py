@@ -37,11 +37,12 @@ class spotify:
         elif '/spoti' in message.text:
 
             first_name = message.chat.first_name
+            username = message.chat.username
             link = message.text.split()
             link.pop(0)
             link = "".join(link)
 
-            gsapi.add_data(first_name, link)
+            gsapi.add_data(first_name, username, link)
 
             # Getting Track Info
 
