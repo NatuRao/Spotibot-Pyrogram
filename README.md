@@ -34,3 +34,5 @@ SpotiBot is a python based bot which is made on Pyrogram module for Telegram. It
 `API_HASH` - Get the value from [my.telegram.org](https://my.telegram.org/apps) here.
 
 `BOT_TOKEN` - Make a bot from [@BotFather](https://t.me/BotFather) and enter token here.
+
+`GSPREAD_JSON` - A link of google sheets API JSON file hosted in the cloud, configure it in https://console.cloud.google.com. For more help [watch this video.](https://www.youtube.com/watch?v=bu5wXjz2KvU)
