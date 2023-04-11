@@ -19,3 +19,18 @@ SpotiBot is a python based bot which is made on Pyrogram module for Telegram. It
 ```
 /yt https://www.youtube.com/watch?v=-BCMqMJx4CE&list=RD-BCMqMJx4CE&start_radio=1
 ```
+## Env Variables
+
+### Spotify Client 
+
+`CLIENT-ID` - Can be fetch from Spotify Developer: https://developer.spotify.com/
+
+`CLIENT - SECRET` - Can be fetch from Spotify Developer https://developer.spotify.com/
+
+### Telegram Config
+
+`API_ID` - Get the value from [my.telegram.org](https://my.telegram.org/apps) here.
+
+`API_HASH` - Get the value from [my.telegram.org](https://my.telegram.org/apps) here.
+
+`BOT_TOKEN` - Make a bot from [@BotFather](https://t.me/BotFather) and enter token here.
